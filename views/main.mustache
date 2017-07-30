@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta lang="en">
+  <title></title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        {{#user}}
+        <li>Logged in as {{user}}<a href="/app/home"> Home</a><a href="/logout"> Log Out</a></li>
+        {{/user}}
+        {{^user}}
+        <li><a href="/app/user/login">Log In</a></li>
+        {{/user}}
+      </ul>
+    </nav>
+  </header>
+</body>
+{{{yield}}}
+</html>
